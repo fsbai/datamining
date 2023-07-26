@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Notebook HTML</title>
+        <style>
+    .menu {
+        background-color: #f0f0f0;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 280px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .menu-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .menu-item {
+        perspective: 1000px;
+        margin-bottom: 5px;
+    }
+
+    .menu-button {
+        display: block;
+        background-color: #ccc;
+        border: none;
+        color: #333;
+        text-align: center;
+        text-decoration: none;
+        padding: 10px;
+        width: 100%;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 5px;
+        transition: background-color 0.3s, transform 0.3s;
+        transform-style: preserve-3d;
+    }
+
+    .menu-button:hover {
+        background-color: #ddd;
+        transform: translateZ(10px);
+    }
+           
+            body {
+                display: flex;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+            
+         
+            
+            .content {
+                margin-left: 200px; /* Ajustez cette valeur en fonction de la largeur du menu */
+                margin-top: 100px;
+                margin-bottom: 100px;
+            }
+            
+            
+            .iframe-style {
+        width: 1200px;
+        height: 800px;
+        
+      
+    }
+        </style>
+        <script>
+            function showNotebook(url) {
+                var iframe = document.querySelector('.iframe-style');
+                iframe.src = url;
+            }
+        </script>
+    </head>
+<body>
+  
+<div class="menu">
+    <!-- Contenu HTML du menu ici -->
+    <h2>NoteBooks</h2>
+    <ul class="menu-list">
+        <li class="menu-item">
+            <a href="#" class="menu-button" onclick="showNotebook('1-Botanic_Article.html')">Article</a>
+        </li>
+        <li class="menu-item">
+            <a href="#" class="menu-button" onclick="showNotebook('1-Botanic_Client.html')">Client</a>
+        </li>
+        <li class="menu-item">
+            <a href="#" class="menu-button" onclick="showNotebook('1-Botanic_Magasin.html')">Magasin</a>
+        </li>
+        <li class="menu-item">
+            <a href="#" class="menu-button" onclick="showNotebook('1-Botanic_Client.html')">Client</a>
+        </li>
+        <!-- Ajoutez les autres items ici pour les autres notebooks -->
+    </ul>
+</div>
+
+<div class="content">
+    <!-- Ici, nous ajoutons l'iframe pour afficher les pages HTML générées -->
+    <iframe src="1-Botanic_Article.html" name="content"  class="iframe-style"></iframe>
+</div>
+</body>
+</html>
